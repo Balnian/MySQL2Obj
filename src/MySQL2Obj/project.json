@@ -1,7 +1,8 @@
 {
   "title": "MySQL2Obj",
+  "authors": [ "Francis Lemaire" ],
   "copyright": "Francis Lemaire",
-  "description": "Wrapper over MySQL for safe and easy query returning a list of object (midway between MySQL connector and Entity Framework)",
+  "description": "Simple wrapper over MySQL.Data for safe and easy use. Do SQL Query an retreive a list of object of the type you requested. Midway between the raw MySQL Connector and Entity Framework",
   "version": "1.0.0-*",
 
   "dependencies": {
@@ -13,5 +14,18 @@
     "netstandard1.6": {
       "imports": "dnxcore50"
     }
+  },
+  "packOptions": {
+    "owners": [ "Francis Lemaire" ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Balnian/MySQL2Obj"
+    },
+    "tags": [ "MySQL2Obj", "MySQL", "Entity Framework", "SQL" ],
+    "projectUrl": "https://github.com/Balnian/MySQL2Obj",
+    "summary": "Simple wrapper over MySQL.Data for safe and easy use. Do SQL Query an retreive a list of object of the type you requested. Midway between the raw MySQL Connector and Entity Framework"
+
+
+
   }
 }
