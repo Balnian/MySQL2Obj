@@ -1,7 +1,11 @@
-﻿{
+{
+  "title": "MySQL2Obj",
+  "copyright": "Francis Lemaire",
+  "description": "Wrapper over MySQL for safe and easy query returning a list of object (midway between MySQL connector and Entity Framework)",
   "version": "1.0.0-*",
 
   "dependencies": {
+    "MySql.Data": "6.10.0-alpha",
     "NETStandard.Library": "1.6.0"
   },
 
