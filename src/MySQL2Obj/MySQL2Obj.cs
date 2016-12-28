@@ -7,9 +7,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MySQL2Obj
+namespace MySQL2ObjWrapper
 {
-    class MySQL2Obj:IMySQL2Obj
+    public class MySQL2Obj:IMySQL2Obj
     {
         private String ConnectionString;
         public MySQL2Obj(string connectionString) //: base(connectionString)
