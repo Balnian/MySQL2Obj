@@ -3,7 +3,7 @@
   "authors": [ "Francis Lemaire" ],
   "copyright": "Francis Lemaire",
   "description": "Simple wrapper over MySQL.Data for safe and easy use. Do SQL Query an retreive a list of object of the type you requested. Midway between the raw MySQL Connector and Entity Framework",
-  "version": "1.0.0-*",
+  "version": "1.1.0-*",
 
   "dependencies": {
     "MySql.Data": "6.10.0-alpha",
@@ -23,8 +23,8 @@
     },
     "tags": [ "MySQL2Obj", "MySQL", "Entity Framework", "SQL" ],
     "projectUrl": "https://github.com/Balnian/MySQL2Obj",
-    "summary": "Simple wrapper over MySQL.Data for safe and easy use. Do SQL Query an retreive a list of object of the type you requested. Midway between the raw MySQL Connector and Entity Framework"
-
+    "summary": "Simple wrapper over MySQL.Data for safe and easy use. Do SQL Query an retreive a list of object of the type you requested. Midway between the raw MySQL Connector and Entity Framework",
+    "releaseNotes": "Added Methods to allow NonQuery calls" 
 
 
   }

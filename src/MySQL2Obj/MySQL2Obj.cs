@@ -124,5 +124,73 @@ namespace MySQL2ObjWrapper
                 }
             }
         }
+
+        public async Task<int> QueryAsync(string SQLQuery, Dictionary<string, object> Params) 
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                using (MySqlCommand cmd = conn.CreateCommand())
+                {
+
+                    cmd.CommandText = SQLQuery;
+                    //Add parameters
+                    foreach (var item in Params)
+                    {
+                        cmd.Parameters.AddWithValue(item.Key, item.Value);
+                    }
+                    return await cmd.ExecuteNonQueryAsync();
+                }
+            }
+        }
+
+        public async Task<int> QueryAsync(string SQLQuery)
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                using (MySqlCommand cmd = conn.CreateCommand())
+                {
+
+                    cmd.CommandText = SQLQuery;
+                    //Add parameters
+                    return await cmd.ExecuteNonQueryAsync();
+                }
+            }
+        }
+
+        public int Query(string SQLQuery, Dictionary<string, object> Params) 
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                using (MySqlCommand cmd = conn.CreateCommand())
+                {
+
+                    cmd.CommandText = SQLQuery;
+                    //Add parameters
+                    foreach (var item in Params)
+                    {
+                        cmd.Parameters.AddWithValue(item.Key, item.Value);
+                    }
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public int Query(string SQLQuery)
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                using (MySqlCommand cmd = conn.CreateCommand())
+                {
+
+                    cmd.CommandText = SQLQuery;
+                    return cmd.ExecuteNonQuery();
+
+                }
+            }
+        }
     }
 }
