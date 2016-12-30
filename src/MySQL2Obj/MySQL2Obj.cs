@@ -12,7 +12,7 @@ namespace MySQL2ObjWrapper
     public class MySQL2Obj:IMySQL2Obj
     {
         private String ConnectionString;
-        public MySQL2Obj(string connectionString) //: base(connectionString)
+        public MySQL2Obj(string connectionString)
         {
             ConnectionString = connectionString;
         }
@@ -44,7 +44,7 @@ namespace MySQL2ObjWrapper
             reader.Dispose();
             return output;
         }
-
+        
         public async Task<List<T>> QueryAsync<T>(string SQLQuery, Dictionary<string, object> Params) where T : new()
         {
             using (MySqlConnection conn = GetConnection())
